@@ -1,7 +1,9 @@
 function pow() {
   var num = prompt('Введите число'),
       exp = prompt('Введите степень'),
+      minpow,
       result = num;
+
       
       if (exp == 0) {
         console.log('1');
@@ -9,7 +11,7 @@ function pow() {
           for (var j = 1; j < Math.abs(exp); j++) {
            result*=num;
           }
-          var minpow=1/result;
+        minpow=1/result;
         console.log(minpow);
         
       } else if (num && exp && !isNaN(num) && !isNaN(exp)) {
