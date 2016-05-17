@@ -64,7 +64,7 @@ $(function(){
 	});
 
 	function showDropdown(){
-		$(this).children('ul').slideDown('slow', function(){
+		$(this).children('ul').stop(true, true).slideDown('slow', function(){
 			$(this).animate({
 				backgroundColor: 'rgba(38, 38, 38, 1)',
 				'z-index': '+=10'
