@@ -6,7 +6,7 @@ $(function() {
 		testTitle: 'Тест',
 		questions: [
 			{
-			quest: 'Столица украины?',
+			quest: 'Столица Украины?',
 			answers: [
 					  {answer: 'Киев', check: true}, 
 					  {answer:'Харьков', check: false},
