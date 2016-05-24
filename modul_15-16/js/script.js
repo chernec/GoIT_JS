@@ -1,14 +1,12 @@
 "use strist";
 $(function() {
-    $('form.search').keydown(function(e) {
+    $('.search').keydown(function(e) {
         if (e.keyCode == 13) {
-            e.preventDefault();
             formSubmit();
         }
     })
 	
-    $('#searchButton').click(function(e) {
-        e.preventDefault();
+    $('#searchButton').click(function() {
         formSubmit();
     })
 
@@ -20,7 +18,7 @@ $(function() {
             return;
         }
 
-        $('form.search').removeClass('search--main');
+        $('.search').removeClass('search--main');
 
         $.ajax({
             url: 'https://www.googleapis.com/customsearch/v1?key=AIzaSyD_yotJt04CJfQ4Ibc7wG7uMLP5fEy_zfY&cx=016795527241021289695:jljvvlrwqde&q=' + searchQuery,
