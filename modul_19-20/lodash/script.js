@@ -10,7 +10,6 @@ $(function(){
 
 function success(data){
   var obj = JSON.parse(data);
-  /* array of skills*/
 
   var skills = _.map(obj, 'skills');
   skills = _.flatten(skills);
@@ -18,15 +17,11 @@ function success(data){
   skills = _.orderBy(skills);
   console.log("skills array: ", skills);
 
-  /* array users by friends */
-
   var userFriends = _.orderBy(obj, function(el){
     return 1 - el.friends.length;});
   userFriends = _.map(userFriends, 'name');
 
   console.log('users sorted by friends amount: ', userFriends);
-
-  /* Массив всех друзей всех пользователей, не должно быть повторяющихся людей*/
 
   var friends = _.map(obj, "friends");
   friends = _.flatten(friends);
